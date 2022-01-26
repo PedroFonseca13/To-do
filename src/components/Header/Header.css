@@ -11,13 +11,16 @@
   --color-5: #f5efed;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.header {
+  align-items: center;
+  background-color: var(--header-color);
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  padding: 15px;
 }
 
-body {
-  background-color: var(--body-color);
-  color: var(--color-5);
+.icon-header {
+  font-size: 2rem;
+  cursor: pointer;
 }

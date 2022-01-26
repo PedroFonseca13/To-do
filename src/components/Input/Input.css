@@ -1,0 +1,64 @@
+:root {
+  --body-color: #252323;
+  --header-color: #3A4E48;
+  --light-green: #89ce94;
+  --medium-blue: #575C55;
+
+  --color-1: #53FF45;
+  --color-2: #F4FF52;
+  --color-3: #252323;
+  --color-4: #3A4E48;
+  --color-5: #f5efed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form-container {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  padding: 15px;
+}
+
+.form-container p {
+  /* border-bottom: 1px solid #eee; */
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  border: none;
+  border-radius: 10px 0 0 10px;
+  font-size: 2rem;
+  height: 50px;
+  padding-left: 10px;
+  min-width: 80%;
+}
+
+/* input[type=text]:focus {
+  border: var(--color-1)
+} */
+
+.form {
+  display: flex;
+}
+
+.form button {
+  align-items: center;
+  background: var(--light-green);
+  border-radius: 0 10px 10px 0;
+  border: none;
+  color: var(--color-5);
+  cursor: pointer;
+  display: flex;
+  font-size: 1.8rem;
+  height: 50px;
+  justify-content: center;
+  width: 50px;
+}
