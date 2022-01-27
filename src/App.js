@@ -1,14 +1,19 @@
-import Header from './components/Header/Index';
-import Input from './components/Input/Index';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import NewList from './pages/NewList';
+import Lists from './pages/Lists';
 
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Input />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/new-list" element={<NewList />} />
+        <Route exact path="/lists" element={<Lists />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

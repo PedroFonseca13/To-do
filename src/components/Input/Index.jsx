@@ -14,6 +14,24 @@ export default class Index extends Component {
     };
   }
 
+  componentDidMount() {
+    const { productsArray } = this.state;
+
+    const product = JSON.parse(localStorage.getItem('products'));
+
+    if (!product) return;
+
+    this.setState({ productsArray });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const { productsArray } = this.state;
+
+    if (productsArray === prevState.productsArray) return;
+
+    localStorage.setItem('products', JSON.stringify(productsArray));
+  }
+
   handleSubmit = (event) => {
     event.preventDefault();
 

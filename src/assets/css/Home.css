@@ -1,0 +1,52 @@
+:root {
+  --body-color: #252323;
+  --header-color: #3a4e48;
+  --light-green: #89ce94;
+  --medium-blue: #575c55;
+
+  --color-1: #53ff45;
+  --color-2: #f4ff52;
+  --color-3: #035e7b;
+  --color-4: #3a4e48;
+  --color-5: #f5efed;
+}
+
+main h1 {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 3rem;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 50vh;
+  flex-wrap: wrap;
+}
+
+.section button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2rem;
+  width: 250px;
+  height: 250px;
+  color: var(--color-5);
+  border-radius: 10px;
+  cursor: pointer;
+  background: var(--color-4);
+  transition: all 0.5s ease;
+}
+
+.icon-btn {
+  font-size: 4rem;
+  margin: 10px 0;
+}
+
+.section button:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.04);
+  box-shadow: rgba(245, 243, 243, 0.23) 0px 3px 6px;
+}
