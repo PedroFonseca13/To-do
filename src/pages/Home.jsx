@@ -14,13 +14,13 @@ export default function Home() {
         <h1>Escolha uma função</h1>
 
         <section className="section">
-          <Link to="lists">
+          <Link to="lists" className="link">
             <button type="button">
               <AiOutlineFileAdd className="icon-btn" />
               Nova Lista
             </button>
           </Link>
-          <Link to="/new-list">
+          <Link to="/new-list" className="link">
             <button type="button">
               <FaClipboardList className="icon-btn" />
               Listas

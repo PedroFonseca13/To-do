@@ -1,5 +1,12 @@
 import React from 'react';
+import Header from '../components/Header/Index';
+import ButtonHome from '../components/ButtonHome/Index';
 
 export default function NewList() {
-  return <div>Nova Lista</div>;
+  return (
+    <>
+      <Header />
+      <ButtonHome />
+    </>
+  );
 }

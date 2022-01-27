@@ -1,16 +1,3 @@
-:root {
-  --body-color: #252323;
-  --header-color: #3A4E48;
-  --light-green: #89ce94;
-  --medium-blue: #575C55;
-
-  --color-1: #53FF45;
-  --color-2: #F4FF52;
-  --color-3: #252323;
-  --color-4: #3A4E48;
-  --color-5: #f5efed;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +13,7 @@
   padding: 15px;
 }
 
-.form-container p {
+.form-container-p {
   /* border-bottom: 1px solid #eee; */
   font-size: 1.8rem;
   margin-bottom: 20px;
@@ -41,9 +28,9 @@
   min-width: 80%;
 }
 
-/* input[type=text]:focus {
-  border: var(--color-1)
-} */
+input[type="text"]:focus {
+  border: none;
+}
 
 .form {
   display: flex;
@@ -61,4 +48,17 @@
   height: 50px;
   justify-content: center;
   width: 50px;
+}
+
+.section-input {
+  background-color: antiquewhite;
+  color: black;
+  margin-top: 20px;
+  min-height: 25vh;
+  text-align: center;
+  width: 400px;
+}
+
+.section-input-p{
+
 }

@@ -85,7 +85,7 @@ export default class Index extends Component {
 
     return (
       <div className="form-container">
-        <p>Adicione ou procure produtos na lista:</p>
+        <p className="form-container-p">Adicione itens na lista:</p>
         <form onSubmit={this.handleSubmit} className="form">
           <label htmlFor="name">
             <input
@@ -101,8 +101,8 @@ export default class Index extends Component {
             <FaPlus />
           </button>
         </form>
-        <section>
-          Lista
+        <section className="section-input">
+          <p className="section-input-p">Lista</p>
           <ul>
             {productsArray.map((product, index) => (
               <li key={product}>
