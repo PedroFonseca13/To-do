@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { FaPlus } from 'react-icons/fa';
 import { AiOutlineCloseCircle, AiOutlineEdit } from 'react-icons/ai';
+import { monName } from '../../CONST';
+
 import './Input.css';
 
 export default class Index extends Component {
@@ -11,6 +13,8 @@ export default class Index extends Component {
       inputText: '', // nova tarefa
       productsArray: [], // tarefas
       index: -1,
+      date: '',
+      arrayList: [],
     };
   }
 
@@ -22,6 +26,8 @@ export default class Index extends Component {
     if (!product) return;
 
     this.setState({ productsArray });
+
+    this.setDate();
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -80,8 +86,23 @@ export default class Index extends Component {
     this.setState({ productsArray: [...newProducts] });
   };
 
+  testFunction = () => {
+    const { productsArray, arrayList } = this.state;
+    this.setState({ arrayList: [...productsArray] });
+    console.log(productsArray);
+    console.log(arrayList);
+  };
+
+  setDate = () => {
+    const now = new Date();
+    const fullDate = `${now.getDay()}/${
+      monName[now.getMonth()]
+    }/${now.getFullYear()}`;
+    this.setState({ date: fullDate });
+  };
+
   render() {
-    const { inputText, productsArray } = this.state;
+    const { inputText, productsArray, date } = this.state;
 
     return (
       <div className="form-container">
@@ -102,9 +123,19 @@ export default class Index extends Component {
           </button>
         </form>
         <section className="section-input">
-          <p className="section-input-p">Lista</p>
-          <ul>
+          <p className="section-input-p">
+            {`Lista -
+            ${date}`}
+          </p>
+          <article>
             {productsArray.map((product, index) => (
+              // <ListCard
+              //   product={product}
+              //   index={index}
+              //   handleEdit={this.handleEdit}
+              //   handleDelete={this.handleDelete}
+              // />
+
               <li key={product}>
                 {product}
                 <div>
@@ -117,7 +148,8 @@ export default class Index extends Component {
                 </div>
               </li>
             ))}
-          </ul>
+          </article>
+          <button type="button" onClick={this.testFunction}>Salvar</button>
         </section>
       </div>
     );
